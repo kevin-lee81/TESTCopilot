@@ -5,3 +5,72 @@
     <li><a href="directions.html">Directions</a></li>
   </ul>
 </nav>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- 네비게이션 -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="directions.html">Directions</a></li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <h1>주문하기</h1>
+    
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="productType">제품 종류</label>
+        <select id="productType"></select>
+      </div>
+      
+      <div class="form-group">
+        <label for="material">소재</label>
+        <select id="material"></select>
+      </div>
+      
+      <div class="form-group">
+        <label for="printType">인쇄 방식</label>
+        <select id="printType"></select>
+      </div>
+      
+      <div class="form-group">
+        <label for="size">사이즈</label>
+        <select id="size"></select>
+      </div>
+      
+      <div class="form-group">
+        <label for="quantity">수량</label>
+        <select id="quantity"></select>
+      </div>
+      
+      <div class="form-group">
+        <label for="notes">추가 요청사항</label>
+        <textarea id="notes" rows="4" placeholder="배송 메모나 디자인 요청사항을 입력하세요."></textarea>
+      </div>
+      
+      <button type="button" onclick="updateSummary()">요약 보기</button>
+    </form>
+    
+    <div class="summary" id="summary">
+      <!-- 자바스크립트가 여기에 요약 결과를 뿌립니다. -->
+    </div>
+    
+    <div class="summary">
+      <h2>무통장 입금 안내</h2>
+      <p>은행: OO은행 123-456-789012</p>
+      <p>예금주: 홍길동</p>
+      <p>입금 확인 후 순차적으로 제작·발송합니다.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/order.js"></script>
+</body>
+</html>
